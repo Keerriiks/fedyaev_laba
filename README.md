@@ -1,2 +1,2 @@
-# fedyaeb_laba
+# fedyaev_laba
 Лабы по слону
