@@ -1,60 +1,26 @@
-<?php
-
-declare(strict_types=1);
-
-// Функция автозагрузки
-spl_autoload_register(function ($class) {
-    $prefix = 'MyProject\\';
-    $base_dir = __DIR__ . '/MyProject/';
-
-    $len = strlen($prefix);
-    if (strncmp($prefix, $class, $len) !== 0) {
-        return;
-    }
-
-    $relative_class = substr($class, $len);
-    $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
-
-    if (file_exists($file)) {
-        require $file;
-    }
-});
-
-use MyProject\Classes\User;
-use MyProject\Classes\SuperUser;
-
-// Создание обычных пользователей
-$user1 = new User("John Doe", "john", "password123");
-$user2 = new User("Jane Smith", "jane", "password456");
-$user3 = new User("Bob Wilson", "bob", "password789");
-
-// Создание привилегированного пользователя
-$superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
-
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лабораторные работы по PHP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #4a6da7;
-            --secondary-color: #5d93bb;
-            --accent-color: #f0ad4e;
+            --primary-color: #ff7f0e; /* Оранжевый */
+            --accent-color: #009acb; /* Голубой */
             --text-color: #333;
-            --light-bg: #f8f9fa;
+            --light-bg: #f5f5f5;
             --border-color: #ddd;
             --shadow-color: rgba(0, 0, 0, 0.1);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 1200px;
+            font-family: 'Roboto Slab', serif;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background-color: var(--light-bg);
             color: var(--text-color);
             line-height: 1.6;
         }
@@ -73,14 +39,14 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
         }
 
         .subtitle {
-            color: var(--secondary-color);
+            color: var(--accent-color);
             font-size: 1.2rem;
             margin-bottom: 30px;
         }
 
         .main-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 25px;
             margin-bottom: 40px;
         }
@@ -91,7 +57,7 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
             box-shadow: 0 4px 8px var(--shadow-color);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
+            padding: 0;
             display: flex;
             flex-direction: column;
         }
@@ -111,14 +77,12 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
 
         .lab-content {
             padding: 20px;
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
         .lab-description {
             margin-bottom: 20px;
-            flex-grow: 1;
         }
 
         .lab-link {
@@ -135,18 +99,7 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
         }
 
         .lab-link:hover {
-            background-color: #e09a3c;
-        }
-
-        .completed-badge {
-            display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            margin-left: 10px;
-            vertical-align: middle;
+            background-color: #007ba3;
         }
 
         .footer {
@@ -167,40 +120,40 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
     <div class="main-container">
         <div class="lab-card">
             <div class="lab-header">
-                Лабораторная работа №1 <span class="completed-badge">Выполнено</span>
+                Лабораторная работа №1
             </div>
             <div class="lab-content">
                 <div class="lab-description">
                     <p>Система управления пользователями. Реализация классов User и SuperUser с использованием ООП в PHP.</p>
                     <p>Демонстрация создания, вывода информации и удаления пользователей.</p>
                 </div>
-                <a href="lab1.php" class="lab-link">Открыть работу</a>
+                <a href="lab1.php" class="lab-link">Открыть</a>
             </div>
         </div>
 
         <div class="lab-card">
             <div class="lab-header">
-                Лабораторная работа №2 <span class="completed-badge">Выполнено</span>
+                Лабораторная работа №2
             </div>
             <div class="lab-content">
                 <div class="lab-description">
                     <p>Паттерны проектирования в PHP. Изучение и реализация популярных паттернов проектирования: порождающих, структурных и поведенческих.</p>
                     <p>Демонстрация работы каждого паттерна на практических примерах.</p>
                 </div>
-                <a href="lab2.php" class="lab-link">Открыть работу</a>
+                <a href="lab2.php" class="lab-link">Открыть</a>
             </div>
         </div>
 
         <div class="lab-card">
             <div class="lab-header">
-                Лабораторная работа №3 <span class="completed-badge">Выполнено</span>
+                Лабораторная работа №3
             </div>
             <div class="lab-content">
                 <div class="lab-description">
                     <p>Паттерн Модель-Представление-Контроллер (MVC). Реализация паттернов проектирования: Одиночка (Singleton), Фабричный метод (Factory Method).</p>
                     <p>Создание диаграмм классов с использованием PlantUML и реализация MarkdownView.</p>
                 </div>
-                <a href="lab3.php" class="lab-link">Открыть работу</a>
+                <a href="lab3.php" class="lab-link">Открыть</a>
             </div>
         </div>
 
@@ -213,33 +166,7 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
                     <p>Работа с файлами и сессиями. Загрузка и обработка файлов, сохранение состояния между запросами.</p>
                     <p>Реализация системы хранения пользовательских настроек.</p>
                 </div>
-                <a href="lab4.php" class="lab-link">Открыть работу</a>
-            </div>
-        </div>
-
-        <div class="lab-card">
-            <div class="lab-header">
-                Лабораторная работа №5
-            </div>
-            <div class="lab-content">
-                <div class="lab-description">
-                    <p>Работа с API и асинхронными запросами. Использование AJAX для создания динамических веб-приложений.</p>
-                    <p>Интеграция с внешними сервисами и обработка JSON-данных.</p>
-                </div>
-                <a href="lab5.php" class="lab-link">Открыть работу</a>
-            </div>
-        </div>
-
-        <div class="lab-card">
-            <div class="lab-header">
-                Лабораторная работа №6
-            </div>
-            <div class="lab-content">
-                <div class="lab-description">
-                    <p>Разработка REST API. Создание и документирование API для взаимодействия с внешними системами.</p>
-                    <p>Реализация механизмов аутентификации и авторизации.</p>
-                </div>
-                <a href="lab6.php" class="lab-link">Открыть работу</a>
+                <a href="lab4.php" class="lab-link">Открыть</a>
             </div>
         </div>
     </div>
