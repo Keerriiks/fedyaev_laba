@@ -24,12 +24,12 @@ use MyProject\Classes\User;
 use MyProject\Classes\SuperUser;
 
 // Создание обычных пользователей
-$user1 = new User("John Doe", "john", "password123");
-$user2 = new User("Jane Smith", "jane", "password456");
-$user3 = new User("Bob Wilson", "bob", "password789");
+$user1 = new User("Some1", "Some2", "Some3");
+$user2 = new User("Some12", "Some114", "Some12t436");
+$user3 = new User("Some111", "Some1325211", "Some134747458");
 
 // Создание привилегированного пользователя
-$superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
+$superUser = new SuperUser("Some1jhh", "Some1352", "adminpass", "Some1");
 
 ?>
 <!DOCTYPE html>
@@ -37,47 +37,10 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Система управления пользователями</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .user-card {
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 15px;
-            margin: 10px 0;
-        }
-        .super-user-card {
-            background-color: #e8f4ff;
-            border: 1px solid #b8daff;
-        }
-        .stats {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e9ecef;
-            border-radius: 4px;
-        }
-        .user-info {
-            margin: 5px 0;
-        }
-    </style>
+    <title>Классы и интерфейсы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта Roboto -->
+
 </head>
 <body>
     <div class="container">
@@ -115,6 +78,11 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
             <p>Всего привилегированных пользователей: <?php echo SuperUser::getSuperUserCount(); ?></p>
         </div>
     </div>
+        <div>
+        <a href="https://img.plantuml.biz/plantuml/png/fLRTRjfW3BtFKtpYPfic-W1JDVLLKCkcIXqNmAxMIJHTsmkGw2IaJPe6dRO722bHKcZW5Umtsh53GtuR2ge8xUTZ-zZ7dzEZJhVHxdx-T6PPfwrki_sXSTmqDPfmZvPyGOzusjmpDACbpVaI1nw5R9F3rnHGO6X5Ipm0Ts2tSJOdhsQ-MCQyDL4OkbVh8twSB3Hu_SRwcauzfgb000Zn71gmS7b8FW_YiEMGADpnMQFJCNG7ldFaT_6PKG2uHmiU84gCgPM2f703MmYUBddSGnArIl6f0WF5e3YngH_Vy7UsmKKnFs112n3BHoQqmCV131-uyJ39k8ADzix3kNp3LNh8mvXBPPwj6OyXBcIkO0lOsayPr0tz1im7TmMJbnFxdUbqswUjZn5wf0eYWuXu0zn2_i18BRK5ePvfref0OmnX07dYj2xtPIuHCDGwGlp-O3J4LAljnm4srOmKx6gC-LD5CSTiI6MLQirBEN6VhnAS2XX5KisbgJa-gusDdC9gKlUL-o-zakiuV-1xYI8rIbBdoCb5FLwijWxjlLIZ8vmMIkVAZlrqjkB98oULTIADuW5gapXEukPg_bzIWKnnkkSJ87kHPzhmZtxIE4tb5eA0fNRHZxPPPhf7gjzAhWWc4GlWgOFIscbHxNd6yQtxgtEoFRuuHrewQ5eitIjL2EGNkYsMcnjfbIwOm_DwVUTjk5_OahMcTTp187rBY6H4U4tTusymFu0A8blxlxGEpmyE2cwEzVmxIRrsxjp-iPzhtorVI7Uqx7Nnriwll7hzVMBdLyKfUrbbecGMJDQQluIAADaFfVYyfWKBKf2rBVOZMdlKR9tWVwR_">
+            uml
+        </a>
+    </div>
 
     <?php
     // Удаление пользователей
@@ -140,9 +108,7 @@ $superUser = new SuperUser("Admin User", "admin", "adminpass", "Administrator");
     
     
     // Выводим все сообщения внутри блока
-    
-    echo '</div>';
-    echo '</div>';
+
     ?>
 </body>
 </html> 
