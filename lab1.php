@@ -78,10 +78,7 @@ $superUser = new SuperUser("Some1jhh", "Some1352", "adminpass", "Some1");
             <p>Всего привилегированных пользователей: <?php echo SuperUser::getSuperUserCount(); ?></p>
         </div>
     </div>
-        <div>
-        <a href="https://img.plantuml.biz/plantuml/png/fLRTRjfW3BtFKtpYPfic-W1JDVLLKCkcIXqNmAxMIJHTsmkGw2IaJPe6dRO722bHKcZW5Umtsh53GtuR2ge8xUTZ-zZ7dzEZJhVHxdx-T6PPfwrki_sXSTmqDPfmZvPyGOzusjmpDACbpVaI1nw5R9F3rnHGO6X5Ipm0Ts2tSJOdhsQ-MCQyDL4OkbVh8twSB3Hu_SRwcauzfgb000Zn71gmS7b8FW_YiEMGADpnMQFJCNG7ldFaT_6PKG2uHmiU84gCgPM2f703MmYUBddSGnArIl6f0WF5e3YngH_Vy7UsmKKnFs112n3BHoQqmCV131-uyJ39k8ADzix3kNp3LNh8mvXBPPwj6OyXBcIkO0lOsayPr0tz1im7TmMJbnFxdUbqswUjZn5wf0eYWuXu0zn2_i18BRK5ePvfref0OmnX07dYj2xtPIuHCDGwGlp-O3J4LAljnm4srOmKx6gC-LD5CSTiI6MLQirBEN6VhnAS2XX5KisbgJa-gusDdC9gKlUL-o-zakiuV-1xYI8rIbBdoCb5FLwijWxjlLIZ8vmMIkVAZlrqjkB98oULTIADuW5gapXEukPg_bzIWKnnkkSJ87kHPzhmZtxIE4tb5eA0fNRHZxPPPhf7gjzAhWWc4GlWgOFIscbHxNd6yQtxgtEoFRuuHrewQ5eitIjL2EGNkYsMcnjfbIwOm_DwVUTjk5_OahMcTTp187rBY6H4U4tTusymFu0A8blxlxGEpmyE2cwEzVmxIRrsxjp-iPzhtorVI7Uqx7Nnriwll7hzVMBdLyKfUrbbecGMJDQQluIAADaFfVYyfWKBKf2rBVOZMdlKR9tWVwR_">
-            uml
-        </a>
+<a href="https://img.plantuml.biz/plantuml/png/hLHDRe905DxFAMQfgLw0cCQaAnTT6NTk44PBWZDc6Eh2abZRdQRTTjShgAqfncglyEP6VO0G4UsYCO4mx-_xUG7gdZAbylik8PPhUXvjUKmsk6AoQrgCZWYbLtHaTZmbJKi5b9jzPb2C7DuxhhcYv_1pnG623uMqpzKjmV7eMwfqI579WrOACELZ7EzE31kyAqfbWzuBnoR1eREzeOABelJJUd5Roh42wYFMZV2vCgZ3LLpB30Zv7mi5tJ6VpLBCWARdKZclfSTKAvKJJKU2CjDDVy3a1PnBuRBJg_1IXaljev8Z-sCxQ3pDtPg3MdC_dJol2qjgveGUR2h_ojSUgjNuNOdpIPYD4iA5ObI90HNT_BTYK7Y3hPx0Ie_rCwnWhHyfNh20ENp13fPw2jyGjZdCzKIF8OI5ViB-UPIby8Cj6prBMgCMXDZeruIm8vGI_OWpau9yxp7A4kyDDdz0Y74y35jKCeNrETHPcqVAFZ4PDs1_c9RmlCF960f3_K98dN4RVn6_" target="_blank">Просмотреть диаграмму классов</a>
     </div>
 
     <?php
