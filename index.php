@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff7f0e; /* Оранжевый */
-            --accent-color: #009acb; /* Голубой */
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-            --border-color: #ddd;
-            --shadow-color: rgba(0, 0, 0, 0.1);
+--primary-color: #070b11;
+  --accent-color: #ff9600;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-color: #200000;
+  --shadow-color: rgba(0, 0, 0, 0.1);
         }
 
         body {
