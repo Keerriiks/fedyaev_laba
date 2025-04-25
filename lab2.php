@@ -9,13 +9,12 @@
     <title>Лабораторная работа №2 - Паттерны проектирования</title>
     <style>
         :root {
-            --primary-color: #4a6da7;
-            --secondary-color: #5d93bb;
-            --accent-color: #f0ad4e;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --border-color: #ddd;
-            --shadow-color: rgba(0, 0, 0, 0.1);
+--primary-color: #070b11;
+  --accent-color: #ff9600;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-color: #200000;
+  --shadow-color: rgba(0, 0, 0, 0.1);
         }
 
         body {
