@@ -127,7 +127,7 @@
     <div class="section-container">
         <h2 class="section-title">Диаграмма классов</h2>
         <div class="diagram-container">
-            <img src="news/images/NewsSystem.png" alt="Диаграмма классов новостной системы" style="max-width: 100%; margin: 0 auto; display: block;">
+            <a href="//www.plantuml.com/plantuml/png/pPBHIW9158RlvoaETgDKWdItT65Y5q49uMsmZBEdPM2TZPbZ8IQerLKlqICe92gXpp3pHitQgFK6xTNX--UV_-VCrWrnJRrk1YryCks-8Umo9XMXlkS2uQh0pGOC6FZl60n_n0ALILA64HZIKgKd83XXckl-WIHeX9OF97DrW2RlQR6tLIBev7c6N8NRKwJjvLxWMlD-m0bcI3-nCecWQ9UY_kKUCYOoRWpyQNiA0qESf1X2in6tBcukTy51ZfDE1EtRQqbujaL7HODcfyWFE3I8Ov4hx-q9AbVsBC4T-k_RsJtZ-NEr6fR4cCe9eMG_xDnExPTTseLxiNCt0J-ktSIF8_VgnPKRtocx13VovsPsuwNfzfmRWvtvUM4tTWNsquzhxtntRs5z9U3-JMeif1VPDSRgg9BYZsFV">uml</a>
         </div>
     </div>
 
