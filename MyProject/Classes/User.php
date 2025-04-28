@@ -1,77 +1,45 @@
 <?php
-
-declare(strict_types=1);
-
 namespace MyProject\Classes;
 
-require_once __DIR__ . '/AbstractUser.php';
+class User {
+    protected $name;
+    protected $login;
+    protected $password;
+    protected static $userCount = 0;
+    protected static $superUserCount = 0;
 
-/**
- * Класс User
- * Представляет базового пользователя в системе
- * 
- * @package MyProject\Classes
- */
-class User extends AbstractUser
-{
-    /** @var string Имя пользователя */
-    public string $name;
-    
-    /** @var string Логин пользователя */
-    public string $login;
-    
-    /** @var string Пароль пользователя */
-    private string $password;
-
-    /** @var int Счетчик количества экземпляров класса User */
-    private static int $userCount = 0;
-
-    /**
-     * Конструктор класса User
-     * 
-     * @param string $name Имя пользователя
-     * @param string $login Логин пользователя
-     * @param string $password Пароль пользователя
-     */
-    public function __construct(string $name, string $login, string $password)
-    {
+    public function __construct($name, $login, $password) {
         $this->name = $name;
         $this->login = $login;
         $this->password = $password;
-        
-        // Увеличиваем счетчик только если это экземпляр класса User (не SuperUser)
-        if (get_class($this) === User::class) {
-            self::$userCount++;
-        }
+        self::$userCount++;
     }
 
-    /**
-     * Отображает информацию о пользователе
-     * 
-     * @return void
-     */
-    public function showInfo(): void
-    {
-        echo "Информация о пользователе:\n";
-        echo "Имя: {$this->name}\n";
-        echo "Логин: {$this->login}\n";
+    public function showInfo() {
+        echo "Пользователь: {$this->name}, Логин: {$this->login}<br>";
     }
 
-    /**
-     * Деструктор
-     */
-    public function __destruct()
-    {
-        echo "Пользователь {$this->login} удален.<br>";
+    public function getInfo() {
+        return [
+            'name' => $this->name,
+            'login' => $this->login,
+            'password' => $this->password
+        ];
     }
 
-    /**
-     * Получить общее количество экземпляров класса User
-     * 
-     * @return int
-     */
-    public static function getUserCount(): int
-    {
+    public static function getUserCount() {
         return self::$userCount;
     }
-} 
+
+    public static function getRegularUserCount() {
+        return self::$userCount - self::$superUserCount;
+    }
+
+    public static function incrementSuperUserCount() {
+        self::$superUserCount++;
+    }
+
+    public static function getSuperUserCount() {
+        return self::$superUserCount;
+    }
+}
