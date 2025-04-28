@@ -169,6 +169,30 @@
                 <a href="lab4.php" class="lab-link">Открыть</a>
             </div>
         </div>
+                <div class="lab-card">
+            <div class="lab-header">
+                Лабораторная работа №5
+            </div>
+            <div class="lab-content">
+                <div class="lab-description">
+                    <p>Работа с файлами и сессиями. Загрузка и обработка файлов, сохранение состояния между запросами.</p>
+                    <p>Реализация системы хранения пользовательских настроек.</p>
+                </div>
+                <a href="lab5.php" class="lab-link">Открыть</a>
+            </div>
+        </div>
+                <div class="lab-card">
+            <div class="lab-header">
+                Лабораторная работа №6
+            </div>
+            <div class="lab-content">
+                <div class="lab-description">
+                    <p>Работа с файлами и сессиями. Загрузка и обработка файлов, сохранение состояния между запросами.</p>
+                    <p>Реализация системы хранения пользовательских настроек.</p>
+                </div>
+                <a href="/lab6/hello/" class="lab-link">Открыть</a>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
